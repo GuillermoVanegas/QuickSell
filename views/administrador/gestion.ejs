@@ -1,0 +1,136 @@
+
+
+<%- include("../templat/encabezado.ejs") %>
+<%- include("../templat/menu.ejs") %>
+
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-header">
+            <h1>SERVICIOS REALIZADOS</h1>
+        </div>
+
+        <div class="card-body"></div>
+        <table>
+         
+            <thead>
+                <tr>
+                    <th>Id del Usuario</th>
+                    <th>Nombre del Administrador</th>
+                    <th>Nombre del Cliente</th>
+                    <th>Servicio</th>
+                    <th>Fecha</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <% compras.forEach((compra) => { %>
+                    <tr>
+                        <td><%= compra.idUsuario %></td>
+                        <td><%= compra.nombreUsuario %></td>
+                        <td><%= compra.producto %></td>
+                        <td><%= compra.tamaño %></td>
+                        <td><%= compra.cantidad %></td>
+                        
+                    </tr>
+                <% }); %>
+                    
+            </tbody>
+        </table>
+
+        <div class="card-footer"></div>
+    </div>
+</div>
+
+<style>
+    .container {
+    margin-top: 20px;
+}
+
+.card {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #444cf7;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #444cf7;
+}
+
+.form-control[type="file"] {
+    cursor: pointer;
+}
+
+.card-footer {
+    padding: 15px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-guardar {
+    background-color: #3498db; /* Azul */
+    color: white;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.btn-guardar:hover {
+    background-color: #2980b9; /* Azul más oscuro */
+    transform: scale(1.05);
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #444cf7;
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+</style>

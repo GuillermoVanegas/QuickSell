@@ -1,0 +1,198 @@
+
+<%- include("../templates/encabezado.ejs") %>
+<style>
+
+
+
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 3px;
+        padding: 0;
+        width: 100%;
+        width: 100%;
+height: 100%;
+/* Add your background pattern here */
+background-color: #e5e5f7;
+background-image: radial-gradient(#444cf7 10%, transparent 10%),
+                  radial-gradient(#444cf7 10%, transparent 10%);
+background-size: 100px 100px;
+background-position: 0 0, 50px 50px;
+    }
+
+    header {
+        
+        padding: 20px;
+        text-align: center; /* Alinear el texto al centro */
+
+        
+
+    }
+
+    nav {
+        display: flex;
+        justify-content: center; /* Centrar los elementos horizontalmente */
+        align-items: center; /* Centrar los elementos verticalmente */
+        background-color: #444cf7; /* Fondo pastel */
+        border-radius: 20px; /* Bordes curvos */
+        overflow: hidden; /* Evitar desbordamiento de bordes curvos */
+
+
+        
+    }
+
+    .menu-item {
+        text-decoration: none;
+        color: #ffffff; /* Color de enlaces en tono pastel */
+        font-size: 22px; /* Tamaño de fuente más pequeño */
+        transition: color 0.3s;
+        transition: transform 0.3s;
+        padding: 25px 30px; /* Espaciado interno */
+        margin: 0 5px; /* Espaciado entre elementos del menú */
+        border-radius: 14px 14px; /* Bordes curvos */
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: bold;
+    }
+
+    .menu-item:hover  {
+        background-color: rgb(229, 233, 238);   
+        color: #444cf7;
+        text-decoration: none;
+        font-size: 23px;
+        transform: scale(1.1);
+        border-radius: 14px;
+    }
+
+    .menunav {
+        width: 100%;
+        height: 50px;
+        border-radius: 20px; /* Bordes curvos */
+        overflow: hidden; /* Evitar desbordamiento de bordes curvos */
+    }
+
+    .user-icon {
+        background-color: white;   
+        color: #444cf7;
+        text-decoration: none;
+        font-size: 22px;
+        border-radius: 14px 14px;
+        padding: 3px;
+        transition: transform 0.3s;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: bold;
+    }
+
+    .user-icon:hover {
+        transform: scale(1.1); /* Escalar el elemento al 110% al pasar el ratón por encima */
+        text-decoration: none;
+    }
+
+    
+
+</style>
+</head>
+<body>
+
+<header>
+    <nav class="menunav">
+        
+        <a class="menu-item" href="/inicio/<%=user.id%>">INICIO</a>
+        <a class="menu-item" href="/comprar/<%=user.id%>">COMPRAR</a>
+        <a class="menu-item" href="/ubicacion/<%=user.id%>">UBICACION</a>
+        <a class="menu-item" href="/nosotros/<%=user.id%>">NOSOTROS</a>
+        <a class="menu-item" href="/perfil/<%=user.id%>">PERFIL</a>
+        
+        <a class="user-icon" href='/cerrarSesion'">CERRAR SESION</a>
+    </nav>
+</header>
+
+</body>
+</html>
+
+
+<section>
+    <h2>Sobre Nosotros</h2>
+    <p>Bienvenido a nuestra tienda de dulces, donde la dulzura y la diversión se encuentran en cada rincón. Somos apasionados por ofrecer una experiencia única de sabores deliciosos y momentos felices a todos nuestros clientes.</p>
+
+    <p>En nuestra tienda, nos esforzamos por seleccionar los dulces más deliciosos y variados, desde clásicos caramelos hasta innovadoras creaciones que te sorprenderán. Nuestro compromiso con la calidad y la frescura nos distingue, y siempre estamos buscando nuevas formas de deleitar tu paladar.</p>
+
+    <p>Además de nuestra amplia gama de dulces, también nos enorgullece brindar un servicio excepcional. Nuestro equipo está aquí para ayudarte a encontrar tus dulces favoritos, ofrecer recomendaciones y garantizar que tu visita sea tan dulce como nuestros productos.</p>
+
+    <p>¡Explora nuestro mundo de golosinas y déjate llevar por la magia de los sabores! Estamos emocionados de compartir contigo momentos llenos de alegría y dulzura.</p>
+    <p>
+    <h3> Elaborada en la Escuela Tecnologica de San juan del Rio por:</h3>
+    <p> Miguel Angel Ramirez Ramirez    </p>
+    <p> Angel Guillermo Vanegas Bernal  </p>
+    <p> Marco Antonio Nieto Arellano    </p>
+    <p> Guiovani Villagran Valdes   </p> 
+    <p> Carlos Bocanegra Trejo: Fundador    </p> 
+    
+</section>
+
+<style>
+    section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 10px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+    font-family: 'Roboto', sans-serif; /* Cambia la fuente según tus preferencias */
+    color: #3498db; /* Cambia el color del texto según tus preferencias */
+    border-bottom: 2px solid #3498db; /* Línea inferior */
+    padding-bottom: 5px; /* Espaciado bajo la línea */
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+
+h3 {
+    font-family: 'Roboto', sans-serif; 
+    font-size: medium;
+    color: #3498db; 
+    border-bottom: 2px solid #3498db; 
+    padding-bottom: 5px; 
+    margin-bottom: 20px; 
+}
+
+
+
+
+
+    p {
+        line-height: 1.5;
+        color: black;
+        font-family: cursive;
+    }
+
+
+    .biography {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #f8f8f8; /* Cambia el color según tus preferencias */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.biography img {
+    border-radius: 50%;
+    margin-right: 20px;
+    max-width: 150px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+    }
+</style>
+
+<%- include("../templates/pie") %>

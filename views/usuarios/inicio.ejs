@@ -1,0 +1,281 @@
+<%- include("../templates/encabezado") %>
+
+<style>
+
+    
+.card {
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease-in-out; /* Efecto de transición al pasar el ratón */
+  }
+  .card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+  }
+
+  /* Estilo de los títulos */
+  .card-title {
+    font-family: 'Arial', sans-serif; /* Cambia la fuente del título */
+    color: #333; /* Color del texto del título */
+  }
+
+  /* Estilo del botón */
+  .btn-outline-info {
+    background-color: #3498db; /* Cambia el color de fondo del botón */
+    color: #000000; /* Cambia el color del texto del botón */
+    border-color: #3498db; /* Cambia el color del borde del botón */
+  }
+  .btn-outline-info:hover {
+    background-color: #2980b9; /* Cambia el color de fondo al pasar el ratón */
+    border-color: #2980b9; /* Cambia el color del borde al pasar el ratón */
+  }
+  /* Estilo del fondo */
+
+  body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),
+                    radial-gradient(circle at 20% 30%, #a764ff 40%, transparent 50%),
+                    radial-gradient(circle at 80% 70%, #9325dc 30%, transparent 70%);
+        z-index: -1;
+    }
+  
+
+    
+
+    header {
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around; /* Separación uniforme de elementos */
+    align-items: center;
+    background-color: #edffff; /* Azul claro */
+    border-radius: 10px; /* Bordes curvos */
+    overflow: hidden;
+    padding: 15px; /* Añadido espacio interno */
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #2c3e50; /* Azul oscuro para el texto */
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+    padding: 12px 15px; /* Espaciado interno */
+    margin: 0 5px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y amigable */
+    font-weight: bold;
+}
+
+.menu-item:hover {
+    background-color: #3498db; /* Azul más oscuro al pasar el ratón */
+    color: #100e0e; /* Texto blanco al pasar el ratón */
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+.menunav {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px; /* Separación del contenido superior */
+}
+
+.user-icon {
+    background-color: #f3f6f8; /* Azul oscuro para el ícono de usuario */
+    color: #120f0f;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.user-icon:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+.user-icon:active {
+    transform: scale(0.95); /* Reducción momentánea al hacer clic */
+}
+
+.user-icon:not(:hover) {
+    transition: background-color 0.3s; /* Transición de color de fondo al no estar en hover */
+}
+
+.cerrar-sesion {
+    color: #e74c3c; /* Rojo para cerrar sesión */
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 15px; /* Margen izquierdo añadido para separar del ícono de usuario */
+}
+
+.cerrar-sesion:hover {
+    color: #c0392b; /* Cambio de color al pasar el ratón */
+}
+    header {
+        
+        padding: 20px;
+        text-align: center; /* Alinear el texto al centro */
+
+        
+
+    }
+
+    nav {
+        display: flex;
+        justify-content: center; /* Centrar los elementos horizontalmente */
+        align-items: center; /* Centrar los elementos verticalmente */
+        background-color: #444cf7; /* Fondo pastel */
+        border-radius: 20px; /* Bordes curvos */
+        overflow: hidden; /* Evitar desbordamiento de bordes curvos */
+
+
+        
+    }
+
+    .menu-item {
+        text-decoration: none;
+        color: #ffffff; /* Color de enlaces en tono pastel */
+        font-size: 22px; /* Tamaño de fuente más pequeño */
+        transition: color 0.3s;
+        transition: transform 0.3s;
+        padding: 25px 30px; /* Espaciado interno */
+        margin: 0 5px; /* Espaciado entre elementos del menú */
+        border-radius: 14px 14px; /* Bordes curvos */
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: bold;
+    }
+
+    .menu-item:hover  {
+        background-color: rgb(229, 233, 238);   
+        color: #444cf7;
+        text-decoration: none;
+        font-size: 23px;
+        transform: scale(1.1);
+        border-radius: 14px;
+    }
+
+    .menunav {
+        width: 100%;
+        height: 50px;
+        border-radius: 20px; /* Bordes curvos */
+        overflow: hidden; /* Evitar desbordamiento de bordes curvos */
+    }
+
+    .user-icon {
+        background-color: white;   
+        color: #444cf7;
+        text-decoration: none;
+        font-size: 22px;
+        border-radius: 14px 14px;
+        padding: 3px;
+        transition: transform 0.3s;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: bold;
+    }
+
+    .user-icon:hover {
+        transform: scale(1.1); /* Escalar el elemento al 110% al pasar el ratón por encima */
+        text-decoration: none;
+    }
+
+
+</style>
+</head>
+<body>
+
+<header>
+    <nav class="menunav">
+        
+        <a class="menu-item" href="/inicio/<%=user.id%>">INICIO</a>
+        <a class="menu-item" href="/comprar/<%=user.id%>">SERVICIO/CLIENTES</a>
+        <a class="menu-item" href="/perfil/<%=user.id%>">PERFIL</a> 
+        <a class="user-icon" href='/cerrarSesion'">CERRAR SESION</a>
+    </nav>
+</header>
+
+</body>
+</html>
+
+
+<style>
+     
+
+    .container-welcome {
+        text-align: center;
+        
+    }
+
+    .container-welcome h1 {
+        font-size: 3rem;
+        color: #fff;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .container-welcome h2 {
+        font-size: 1.8rem;
+        color: #faf9f9;
+    font-style: bold;
+    }
+
+    
+    .card {
+                border: 4px solid #191a18; 
+            }
+
+    .card {
+        background-color: #f5e8e6;
+    }
+
+    
+
+@keyframes rainbowSlide {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1400% 0;
+    }
+}
+</style>
+
+<div class="container-welcome rainbow-bg">
+    <div class="side-image left-image"></div>
+    <h1>Bienvenido a <span style="color: #fff;">QuickSell</span></h1>
+    <h2>Comienza con tus ventas <span class="text-warning"><%=user.nombre%></span></h2>
+    <h2>Area de Servicios</h2>
+    <div class="side-image left-image"></div>
+</div>
+
+
+<div class="container-products mt-5" style="background-color: transparent;">
+    <h2 class="text-center mb-4" style="color: #ffffff; font-weight: bold;">Servicio</h2>
+    <div class="row justify-content-center"> <!-- Centra los elementos en la fila -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #ff6f61; font-weight: bold;">Cita</h5>
+                    <p class="card-text">Nombre del Cliente</p>
+                    <p class="card-text" style="font-weight: bold; color: #0092dd;">Fecha</p>
+                    <a href="/comidaR/<%=user.id%>" class="btn btn-primary details-btn" id="id">Generar Cita</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

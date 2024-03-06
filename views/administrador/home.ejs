@@ -1,0 +1,62 @@
+<%- include("../templat/encabezado.ejs") %>
+<%- include("../templat/menu.ejs") %>
+
+<style>
+    .admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    color: white;
+    width: 100%;
+    background: linear-gradient(45deg, #4e54c8, #8f94fb);
+}
+
+.welcome-text {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-ingresar-productos {
+    padding: 15px 30px;
+    background-color: #878da4; /* Verde */
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-ingresar-productos:hover {
+    background-color: #adb8b1; /* Verde más oscuro al pasar el ratón */
+}
+
+    .welcome-text {
+        font-size: 80px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color:white;
+    }
+
+    .btn-ingresar-productos {
+        padding: 15px 30px;
+        background-color: #ffffff; /* Azul */
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 19.5px;
+    }
+
+    .btn-ingresar-productos::hover{
+      text-decoration: none;
+    }
+</style>
+
+<div class="admin-container">
+    <div class="welcome-text">¡Bienvenido Administrador!</div>
+    <a href="/productos" class="btn-ingresar-productos">VER CLIENTES</a>
+</div>

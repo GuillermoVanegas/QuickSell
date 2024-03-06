@@ -1,0 +1,80 @@
+
+<style>
+        body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),
+                    radial-gradient(circle at 20% 30%, #3498db 40%, transparent 50%),
+                    radial-gradient(circle at 80% 70%, #022bbf 30%, transparent 70%);
+        z-index: -1;
+    }
+
+    header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .menu-item {
+        text-decoration: none;
+        color: #ffffff; /* Color de enlaces en tono pastel */
+        font-size: 22px; /* Tamaño de fuente más pequeño */
+        transition: color 0.3s;
+        transition: transform 0.3s;
+        padding: 25px 30px; /* Espaciado interno */
+        margin: 0 5px; /* Espaciado entre elementos del menú */
+        border-radius: 14px 14px; /* Bordes curvos */
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: bold;
+    }
+
+    .menu-item:hover {
+        background-color: rgb(229, 233, 238);   
+        color: #444cf7;
+        text-decoration: none;
+        font-size: 23px;
+        transform: scale(1.1);
+        
+    }
+
+    .menunav {
+        width: 100%;
+        height: 50px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .user-icon {
+        font-size: 24px;
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<header>
+    <nav class="menunav">
+        <div>
+            <a class="menu-item" href="/home/:id">INICIO</a>
+            <a class="menu-item" href="/gestionarVentas">VENTAS A CLIENTES</a>
+            <a class="menu-item" href="/nuevoProd">AGREGAR CLIENTE</a>
+            <a class="menu-item" href="/">CERRAR SESION</a>
+        </div>
+        
+    </nav>
+</header>
+</body>
+</html>
